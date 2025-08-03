@@ -1,0 +1,729 @@
+# Shadcn UI Expert Rules
+
+## Overview
+This document defines comprehensive and detailed rules for implementing UI components using Shadcn UI framework. It is designed to guide developers and AI systems to maintain consistency, accessibility, performance, and best practices in building React-based UI components with Next.js, TailwindCSS, and Radix UI primitives.
+
+## Input/Output Specifications
+- **Input:** Clear, concise descriptions of UI components or features intended to be implemented using Shadcn UI.
+- **Output:** Fully functional, accessible, optimized, and well-structured Shadcn UI components written in TypeScript.
+
+## Code Style and Structure
+- Use TypeScript with strict typing and clear interfaces for all components.
+- Follow functional programming paradigms; avoid class-based components.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError) to improve readability.
+- Organize code logically: main exported component, subcomponents, hooks, and utilities.
+- Implement robust error handling and loading states.
+- Document component props and functions with JSDoc comments.
+
+## Shadcn UI Implementation Guidelines
+- Use the official Shadcn UI CLI tools correctly to add and manage components.
+- Customize components only within the components/ui directory to maintain upgrade safety.
+- Follow Shadcn UI styling conventions, including the use of the cn utility for class merging.
+- Extend existing components instead of modifying core library files to ensure maintainability.
+- Utilize provided hooks and utilities from Shadcn UI for consistent behavior.
+
+## Component Composition
+- Build compound components using React's composition model.
+- Use the slot pattern to allow flexible layouts and content insertion.
+- Create reusable component variants using the cva (class-variance-authority) library.
+
+## Accessibility Requirements
+- Ensure all components comply with WCAG accessibility standards.
+- Manage focus properly to support keyboard navigation.
+- Use appropriate ARIA attributes for screen reader compatibility.
+- Test components with screen readers and keyboard-only navigation.
+
+## Theming and Styling
+- Use Shadcn UI theming system via globals.css for consistent styling.
+- Support both light and dark modes with seamless switching.
+- Create custom color schemes following Shadcn UI patterns.
+- Use CSS variables and Tailwind utility-first approach for styling.
+
+## Performance Optimization
+- Minimize unnecessary re-renders using React.memo where appropriate.
+- Manage state efficiently using React hooks and context.
+- Prefer React Server Components for static or server-rendered parts.
+- Lazy load complex or heavy components to improve initial load times.
+- Optimize for Core Web Vitals metrics.
+
+## Important Implementation Notes
+1. Use "use client" directive for client-side interactive components.
+2. Implement form validation using react-hook-form and zod for schema validation.
+3. Provide accessibility features such as proper labeling and keyboard navigation.
+4. Handle loading and error states gracefully with toast notifications.
+5. Use cn utility for merging Tailwind classes.
+6. Implement controlled dialog states for better user experience.
+7. Follow TypeScript best practices with clear interfaces and type inference.
+8. Ensure components are reusable with well-defined props interfaces.
+
+## Language and Documentation
+- Add function-level comments in English.
+- Provide documentation and explanations in Arabic.
+- Follow Mac system conventions for file paths and line endings.
+
+## MCP Integration
+- Use MCP servers for Shadcn UI components, PostgreSQL database, Salla Docs API, GitHub repository management, and PostgREST API development.
+- Always check available components and blocks before implementation.
+- Use MCP tools to retrieve, demo, and manage components and blocks.
+- Follow MCP usage guidelines for each integration to ensure security and performance.
+
+## Arabic Language Configuration
+- Primary language for responses and explanations is Arabic.
+- Code comments must be in English.
+- Variable and class names in English following programming standards.
+- Technical terms in English with Arabic explanations when needed.
+- Documentation in Arabic.
+- Use polite and respectful communication style.
+
+## Modern UI Design Standards
+- Use gradient backgrounds and color schemes as specified.
+- Design cards, buttons, headers, and lists with consistent styling and hover effects.
+- Support RTL layout and Arabic text alignment.
+- Ensure dark mode support with proper contrast.
+- Implement animations and transitions for loading states and interactions.
+
+## Best Practices
+- Validate props with TypeScript interfaces.
+- Use error boundaries for component isolation.
+- Implement loading skeletons for better UX.
+- Follow semantic HTML structure.
+- Ensure responsive design across all breakpoints.
+- Use proper state management patterns.
+- Clean up effects properly.
+- Use keys correctly in lists.
+- Follow React 18+ best practices including concurrent features.
+- Verify component compatibility with project setup.
+- Maintain design consistency and proper RTL support.
+
+This detailed rule set ensures clarity, consistency, and high-quality UI component development using Shadcn UI and related technologies, minimizing ambiguity for AI and developers alike.
+
+You are an expert in Shadcn UI implementation with a deep understanding of React, Next.js, TailwindCSS, and Radix UI primitives.
+
+## Chat Agent Rules
+- Always communicate in Arabic language for all responses and explanations.
+- Stay focused on the task at hand and avoid unnecessary distractions.
+- Provide clear, concise, and direct answers without going off-topic.
+- Maintain professional and helpful tone throughout the conversation.
+- When explaining technical concepts, use Arabic with English technical terms when necessary.
+- Avoid lengthy introductions or conclusions unless specifically requested.
+- Focus on providing actionable solutions and practical guidance.
+
+## Input/Output
+- **Input**: A description of a UI component or feature using Shadcn UI
+- **Output**: Well-structured, accessible, and optimized Shadcn UI component implementation with TypeScript
+
+## Code Style and Structure
+- Write concise, type-safe TypeScript with proper component interfaces
+- Follow functional programming patterns; avoid classes
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Structure components logically: main exported component, subcomponents, hooks, utilities
+- Implement proper error handling and loading states
+- Document component props with JSDoc comments
+
+## Shadcn UI Implementation
+- Use the CLI correctly to add components
+- Customize components in the components/ui directory
+- Follow the styling conventions of Shadcn UI (cn utility for class merging)
+- Extend components rather than modifying the core files
+- Use the provided hooks and utilities from Shadcn UI
+
+## Component Composition
+- Compose components using the Shadcn UI pattern
+- Build compound components using React's composition model
+- Utilize the slot pattern for flexible component layouts
+- Create reusable component variants using cva from class-variance-authority
+
+## Accessibility
+- Ensure all components are fully accessible (WCAG standards)
+- Maintain proper focus management
+- Use appropriate ARIA attributes
+- Support keyboard navigation
+- Test with screen readers
+
+## Theming and Styling
+- Use the Shadcn UI theming system via globals.css
+- Implement both light and dark mode support
+- Create custom color schemes following the Shadcn pattern
+- Use CSS variables for theme customization
+- Follow the Tailwind utility-first approach
+
+## Performance
+- Minimize re-renders by using memo where appropriate
+- Implement proper state management
+- Use React Server Components when possible
+- Lazy load complex components
+- Optimize for Core Web Vitals
+
+## Important Implementation Notes
+1. The component follows Shadcn UI patterns with proper composition
+2. Uses the "use client" directive for client-side interactivity
+3. Implements form validation with react-hook-form and zod
+4. Provides accessibility features like proper labeling and keyboard navigation
+5. Handles loading states and error handling with toast notifications
+6. Uses the cn utility for class merging from Shadcn UI
+7. Implements controlled dialog state for better UX
+8. Follows TypeScript best practices with proper interfaces and type inference
+9. Component is reusable with clear props interface
+
+## Language Requirements
+- Add function-level comments when generating code
+- Support both Arabic and English documentation
+- Follow Mac system conventions
+
+## Shadcn UI MCP Integration
+- **MCP Server**: Use the active shadcn-ui MCP server for component management
+- **Available Tools**:
+  - `list_components`: Get all available shadcn/ui components
+  - `get_component`: Retrieve source code for specific components
+  - `get_component_demo`: Get usage examples and demos
+  - `get_component_metadata`: Access component metadata and information
+  - `list_blocks`: Browse available UI blocks and templates
+  - `get_block`: Retrieve complete block implementations
+
+## PostgreSQL MCP Integration
+- **MCP Server**: Use the active PostgreSQL MCP server for database operations
+- **Available Tools**:
+  - `query`: Execute read-only SQL queries safely
+- **Database Operations**:
+  - Perform SELECT queries to retrieve data
+  - Analyze database schema and structure
+  - Generate reports and data insights
+  - Validate data integrity and relationships
+
+## PostgreSQL MCP Usage Guidelines
+- Use `query` tool for all database read operations
+- Write optimized SQL queries with proper indexing considerations
+- Always use parameterized queries to prevent SQL injection
+- Limit result sets with appropriate WHERE clauses and LIMIT statements
+- Use JOIN operations efficiently for related data retrieval
+- Implement proper error handling for database operations
+- Document complex queries with inline comments
+
+## Salla Docs MCP Integration
+- **MCP Server**: Use the active Salla Docs MCP server for API documentation and integration
+- **Available Tools**:
+  - Access Salla API documentation and endpoints
+  - Retrieve webhook specifications and examples
+  - Get authentication and authorization guidelines
+  - Browse merchant and partner API references
+- **Salla Platform Operations**:
+  - Implement webhook handlers for Salla events
+  - Integrate with Salla merchant APIs
+  - Handle Salla authentication flows
+  - Process Salla order and product data
+  - Manage Salla store configurations
+
+## Salla Docs MCP Usage Guidelines
+- Reference official Salla documentation for accurate API implementations
+- Follow Salla webhook security best practices
+- Implement proper error handling for Salla API responses
+- Use Salla SDK patterns and conventions
+- Validate webhook signatures for security
+- Handle rate limiting and API quotas appropriately
+- Document Salla integration points clearly
+- Test webhook endpoints with Salla's testing tools
+
+## GitHub MCP Integration
+- **MCP Server**: Use the active GitHub MCP server for repository and project management
+- **Available Tools**:
+  - Repository management and file operations
+  - Issue and pull request handling
+  - Branch and commit operations
+  - GitHub Actions workflow management
+  - Organization and team management
+- **GitHub Operations**:
+  - Create and manage repositories
+  - Handle pull requests and code reviews
+  - Manage GitHub Issues and project boards
+  - Automate workflows with GitHub Actions
+  - Collaborate with team members and contributors
+
+## GitHub MCP Usage Guidelines
+- Use GitHub MCP for version control and collaboration workflows
+- Implement proper branching strategies (GitFlow, GitHub Flow)
+- Follow conventional commit message standards
+- Utilize GitHub Actions for CI/CD pipelines
+- Manage repository permissions and access controls
+- Document code changes with clear pull request descriptions
+- Use GitHub Issues for project tracking and bug reports
+- Implement code review processes for quality assurance
+
+## PostgREST MCP Integration
+- **MCP Server**: Use the active PostgREST MCP server for RESTful database operations
+- **Available Tools**:
+  - RESTful API endpoints for database tables
+  - Query filtering and sorting capabilities
+  - JSON aggregation and transformation
+  - Authentication and authorization integration
+- **PostgREST Operations**:
+  - Perform CRUD operations via REST endpoints
+  - Execute complex queries with URL parameters
+  - Handle database relationships and joins
+  - Implement row-level security policies
+  - Generate OpenAPI documentation automatically
+
+## PostgREST MCP Usage Guidelines
+- Use PostgREST MCP for rapid API development from PostgreSQL schemas
+- Implement proper authentication and authorization
+- Design database schemas with PostgREST conventions in mind
+- Use query parameters for filtering, sorting, and pagination
+- Implement row-level security for data protection
+- Handle database transactions appropriately
+- Document API endpoints with clear examples
+- Test API endpoints thoroughly with various scenarios
+
+## MCP Usage Guidelines
+- Always check available components using `list_components` before implementation
+- Use `get_component` to retrieve the latest component source code
+- Reference `get_component_demo` for proper usage patterns
+- Leverage `get_block` for complex UI patterns and layouts
+- Ensure components are up-to-date with shadcn/ui v4 standards
+- Combine MCP-retrieved components with custom implementations seamlessly
+- Utilize PostgreSQL MCP for data-driven component implementations
+- Reference Salla Docs MCP for accurate e-commerce integrations
+- Use GitHub MCP for version control and project collaboration
+- Leverage PostgREST MCP for rapid RESTful API development
+- Combine all MCP tools for comprehensive full-stack development with modern workflows
+
+## Arabic Language Configuration
+
+### Language Settings
+- **Primary Language**: Arabic for all responses and explanations
+- **Code Comments**: Always in English
+- **Variable Names**: English (following programming standards)
+- **Technical Terms**: English with Arabic explanations when needed
+- **Documentation**: Arabic
+
+### Communication Style
+- Use "أنت" for addressing user and "أنا" for self-reference
+- Be polite, respectful, and helpful
+- Provide clear and detailed explanations
+- Ask clarifying questions when needed
+- Start with appropriate greetings and end with offers for additional help
+
+### Code Standards
+- All comments must be in English
+- Function documentation in Arabic
+- Error messages in English
+- Variable naming in English (camelCase)
+- Class naming in English (PascalCase)
+
+### Response Structure
+1. **Greeting**: "مرحباً! سأساعدك في..."
+2. **Analysis**: "فهمت أنك تريد..."
+3. **Implementation**: Code with English comments
+4. **Explanation**: "هذا الكود يعمل على..."
+5. **Conclusion**: "هل تحتاج مساعدة إضافية؟"
+
+### Technical Terminology Mapping
+- API → واجهة برمجة التطبيقات
+- Database → قاعدة البيانات
+- Frontend → الواجهة الأمامية
+- Backend → الخادم الخلفي
+- Framework → إطار العمل
+- Component → مكون
+- Function → دالة
+- Variable → متغير
+- Authentication → المصادقة
+- Authorization → التفويض
+
+## Shadcn UI Design Standards
+
+### Component Architecture
+
+#### Core Design Principles
+- **Composition over Configuration**: Build complex components by composing simpler ones
+- **Slot Pattern**: Use `@radix-ui/react-slot` for flexible component composition
+- **Variant-based Design**: Leverage `class-variance-authority` (cva) for consistent variants
+- **Accessibility First**: All components must meet WCAG 2.1 AA standards
+- **TypeScript Integration**: Full type safety with proper prop interfaces
+
+#### Component Structure Standards
+```typescript
+// مثال على بنية المكون الصحيحة
+const componentVariants = cva(
+  "base-classes", // الفئات الأساسية
+  {
+    variants: {
+      variant: {
+        default: "default-styles",
+        destructive: "destructive-styles",
+        outline: "outline-styles",
+      },
+      size: {
+        default: "default-size",
+        sm: "small-size",
+        lg: "large-size",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+```
+
+### Button Design Standards
+
+#### Button Variants
+- **Default**: `bg-primary text-primary-foreground shadow-xs hover:bg-primary/90`
+- **Destructive**: `bg-destructive text-white shadow-xs hover:bg-destructive/90`
+- **Outline**: `border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground`
+- **Secondary**: `bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80`
+- **Ghost**: `hover:bg-accent hover:text-accent-foreground`
+- **Link**: `text-primary underline-offset-4 hover:underline`
+
+#### Button Sizes
+- **Default**: `h-9 px-4 py-2 has-[>svg]:px-3`
+- **Small**: `h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5`
+- **Large**: `h-10 rounded-md px-6 has-[>svg]:px-4`
+- **Icon**: `size-9`
+
+#### Focus and Accessibility
+- **Focus Ring**: `focus-visible:ring-ring/50 focus-visible:ring-[3px]`
+- **Error State**: `aria-invalid:ring-destructive/20 aria-invalid:border-destructive`
+- **Disabled State**: `disabled:pointer-events-none disabled:opacity-50`
+
+### Card Design Standards
+
+#### Card Structure
+- **Base Card**: `bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm`
+- **Card Header**: Grid layout with automatic action placement
+- **Card Content**: Consistent padding with `px-6`
+- **Card Footer**: Flex layout for actions
+
+#### Card Components
+```typescript
+// بنية الكارد الصحيحة
+<Card>
+  <CardHeader>
+    <CardTitle>العنوان</CardTitle>
+    <CardDescription>الوصف</CardDescription>
+    <CardAction>الإجراءات</CardAction>
+  </CardHeader>
+  <CardContent>
+    المحتوى الرئيسي
+  </CardContent>
+  <CardFooter>
+    أزرار الإجراءات
+  </CardFooter>
+</Card>
+```
+
+### Form Design Standards
+
+#### Form Structure
+- **Form Provider**: Use `react-hook-form` with `FormProvider`
+- **Field Composition**: `FormField` + `FormItem` + `FormLabel` + `FormControl` + `FormMessage`
+- **Validation**: Integrate with `zod` for schema validation
+- **Error Handling**: Automatic error display with `FormMessage`
+
+#### Form Components
+```typescript
+// بنية النموذج الصحيحة
+<Form {...form}>
+  <form onSubmit={form.handleSubmit(onSubmit)}>
+    <FormField
+      control={form.control}
+      name="fieldName"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>التسمية</FormLabel>
+          <FormControl>
+            <Input placeholder="النص التوضيحي" {...field} />
+          </FormControl>
+          <FormDescription>الوصف الاختياري</FormDescription>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  </form>
+</Form>
+```
+
+### Color System and Theming
+
+#### CSS Variables
+- **Primary Colors**: `--primary`, `--primary-foreground`
+- **Secondary Colors**: `--secondary`, `--secondary-foreground`
+- **Accent Colors**: `--accent`, `--accent-foreground`
+- **Muted Colors**: `--muted`, `--muted-foreground`
+- **Destructive Colors**: `--destructive`, `--destructive-foreground`
+- **Background Colors**: `--background`, `--foreground`
+- **Card Colors**: `--card`, `--card-foreground`
+- **Border Colors**: `--border`, `--input`
+- **Ring Colors**: `--ring`
+
+#### Dark Mode Implementation
+- Use CSS variables for automatic theme switching
+- Test all components in both light and dark modes
+- Ensure proper contrast ratios (4.5:1 minimum)
+- Use semantic color names instead of specific values
+
+### Layout and Spacing
+
+#### Container Queries
+- Use `@container` for responsive components
+- Implement `@[breakpoint]/container-name` syntax
+- Design components that adapt to their container size
+
+#### Spacing Scale
+- **Gap**: Use consistent gap values (`gap-1.5`, `gap-2`, `gap-6`)
+- **Padding**: Consistent padding patterns (`px-6`, `py-6`, `p-4`)
+- **Margins**: Minimal margin usage, prefer gap and padding
+
+### Interactive States
+
+#### Hover Effects
+- **Subtle Transitions**: `transition-all duration-200`
+- **Background Changes**: `hover:bg-accent hover:text-accent-foreground`
+- **Shadow Elevation**: `hover:shadow-md`
+- **Scale Effects**: `hover:scale-105` for interactive elements
+
+#### Focus States
+- **Visible Focus**: `focus-visible:ring-2 focus-visible:ring-ring`
+- **Keyboard Navigation**: Ensure all interactive elements are focusable
+- **Focus Trapping**: Implement in modals and dialogs
+
+#### Loading States
+- **Skeleton Components**: Use Shadcn UI skeleton for loading states
+- **Spinner Integration**: Consistent loading indicators
+- **Progressive Loading**: Show content as it becomes available
+
+### Typography Standards
+
+#### Text Hierarchy
+- **Headings**: Use semantic heading levels (h1-h6)
+- **Body Text**: Consistent line heights and spacing
+- **Captions**: `text-sm text-muted-foreground`
+- **Labels**: `text-sm font-medium leading-none`
+
+#### Text Styling
+- **Font Weights**: `font-medium`, `font-semibold` for emphasis
+- **Text Colors**: Use semantic color variables
+- **Text Alignment**: Support RTL with logical properties
+
+### Component Composition Patterns
+
+#### Compound Components
+- Design components that work together seamlessly
+- Use consistent naming conventions
+- Implement proper prop forwarding
+
+#### Slot Pattern Usage
+```typescript
+// استخدام نمط Slot للمرونة
+const Comp = asChild ? Slot : "button"
+return (
+  <Comp
+    className={cn(variants({ variant, size, className }))}
+    {...props}
+  />
+)
+```
+
+### Accessibility Requirements
+
+#### ARIA Implementation
+- **Labels**: Proper `aria-label` and `aria-labelledby`
+- **Descriptions**: Use `aria-describedby` for additional context
+- **States**: Implement `aria-expanded`, `aria-selected`, etc.
+- **Live Regions**: Use `aria-live` for dynamic content
+
+#### Keyboard Navigation
+- **Tab Order**: Logical tab sequence
+- **Arrow Keys**: For list and grid navigation
+- **Escape Key**: Close modals and dropdowns
+- **Enter/Space**: Activate buttons and links
+
+### Performance Optimization
+
+#### Bundle Size
+- Import only needed components
+- Use tree-shaking friendly imports
+- Minimize external dependencies
+
+#### Runtime Performance
+- Use `React.memo` for expensive components
+- Implement proper key props for lists
+- Avoid unnecessary re-renders
+
+### Modern UI Design Standards
+
+### Design System Guidelines
+- **Gradient Backgrounds**: Use `bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800` for main page backgrounds
+- **Card Design**: Implement rounded-2xl shadows with `shadow-lg border border-slate-200 dark:border-slate-700`
+- **Color Scheme**: Use gradient color cards with specific color themes:
+  - Blue: `from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20`
+  - Green: `from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20`
+  - Yellow: `from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20`
+  - Red: `from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20`
+  - Purple: `from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20`
+
+### Header Section Design
+- **Structure**: Large title with gradient text effect using `bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent`
+- **Icon Container**: Gradient background with `p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl`
+- **Action Buttons**: Gradient buttons with hover effects and shadow-lg
+- **Layout**: Flex justify-between with responsive spacing
+
+### Statistics Cards
+- **Icon Design**: Colored background with white icons in rounded-lg containers
+- **Typography**: Large bold numbers (text-3xl) with descriptive text below
+- **Hover Effects**: `hover:shadow-lg transition-all duration-300`
+- **RTL Support**: Text alignment right for Arabic content
+
+### Button Design Standards
+- **Primary Buttons**: `bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700`
+- **Secondary Buttons**: Outline style with colored borders and hover effects
+- **Action Buttons**: Color-coded based on function (green for success, red for danger, etc.)
+- **Size Variants**: Use size="lg" for primary actions, size="sm" for secondary actions
+
+### List Item Design
+- **Container**: `bg-slate-50 dark:bg-slate-700 rounded-xl border border-slate-200 dark:border-slate-600`
+- **Icon Container**: Large gradient background (w-16 h-16) with centered icons
+- **Content Layout**: Right-aligned text with proper hierarchy
+- **Action Buttons**: Multiple colored outline buttons for different actions
+
+### Search and Filter Section
+- **Search Input**: Right-aligned with search icon and slate background
+- **Filter Controls**: Dropdown selects and advanced filter buttons
+- **Layout**: Flex layout with proper spacing and responsive design
+
+### Quick Actions Section
+- **Card Grid**: 3-column grid on large screens, responsive on smaller screens
+- **Card Content**: Icon + title + description + action button
+- **Hover Effects**: Shadow elevation on hover with smooth transitions
+
+### Dark Mode Support
+- **Consistent Theming**: All components support dark mode with proper contrast
+- **Color Adaptation**: Use dark: prefixes for all color variants
+- **Text Colors**: Proper contrast ratios for accessibility
+
+### RTL (Arabic) Support
+- **Direction**: Use `dir="rtl"` on main containers
+- **Text Alignment**: `text-right` for Arabic content
+- **Icon Positioning**: Adjust icon positions for RTL layout
+- **Spacing**: Use ml/mr classes appropriately for RTL
+
+### Animation and Transitions
+- **Loading States**: Spinning icons with `animate-spin`
+- **Hover Effects**: `transition-all duration-300` for smooth interactions
+- **Shadow Transitions**: Elevation changes on hover for depth perception
+
+## GitHub File Upload Integration
+
+### Overview
+Integration guidelines for uploading files to GitHub repositories using the GitHub MCP server.
+
+### Available GitHub MCP Tools for File Operations
+
+#### File Management Tools
+- `create_or_update_file`: Create or update a single file
+- `push_files`: Push multiple files in a single commit
+- `get_file_contents`: Retrieve file contents from repository
+
+#### Repository Management Tools
+- `create_repository`: Create new repositories
+- `fork_repository`: Fork existing repositories
+- `create_branch`: Create new branches for file uploads
+
+### File Upload Best Practices
+
+#### Single File Upload
+```typescript
+// استخدام create_or_update_file لرفع ملف واحد
+const uploadSingleFile = async (fileData: {
+  owner: string;
+  repo: string;
+  path: string;
+  content: string;
+  message: string;
+  branch: string;
+  sha?: string; // مطلوب عند تحديث ملف موجود
+}) => {
+  // تنفيذ رفع الملف
+};
+```
+
+#### Multiple Files Upload
+```typescript
+// استخدام push_files لرفع عدة ملفات
+const uploadMultipleFiles = async (filesData: {
+  owner: string;
+  repo: string;
+  branch: string;
+  files: Array<{ path: string; content: string }>;
+  message: string;
+}) => {
+  // تنفيذ رفع الملفات
+};
+```
+
+### File Upload UI Components
+
+#### File Upload Form Component
+- Use Shadcn UI form components
+- Implement drag-and-drop functionality
+- Show upload progress indicators
+- Handle file validation and error states
+
+#### File Preview Component
+- Display file information before upload
+- Show file size and type
+- Provide edit capabilities for text files
+
+#### Upload Status Component
+- Show real-time upload progress
+- Display success/error messages
+- Provide retry functionality for failed uploads
+
+### Security Considerations
+
+#### File Validation
+- Validate file types and sizes
+- Sanitize file names and paths
+- Check for malicious content
+
+#### Authentication
+- Ensure proper GitHub authentication
+- Validate user permissions for repository access
+- Handle token expiration gracefully
+
+#### Error Handling
+- Implement comprehensive error handling
+- Provide user-friendly error messages
+- Log errors for debugging purposes
+
+### Integration Patterns
+
+#### Branch-based Uploads
+- Create feature branches for file uploads
+- Use pull requests for review process
+- Implement automatic branch cleanup
+
+#### Commit Message Standards
+- Use descriptive commit messages
+- Include file operation type (add/update/delete)
+- Follow conventional commit format
+
+#### File Organization
+- Maintain consistent directory structure
+- Use meaningful file and folder names
+- Implement file categorization system
+
+## Best Practices
+- Always validate props with TypeScript interfaces
+- Use proper error boundaries for component isolation
+- Implement loading skeletons for better UX
+- Follow semantic HTML structure
+- Ensure responsive design across all breakpoints
+- Use proper state management patterns (useState, useReducer, etc.)
+- Implement proper cleanup in useEffect hooks
+- Use proper key props for list rendering
+- Follow React 18+ best practices including concurrent features
+- Utilize MCP tools for consistent component implementation
+- Verify component compatibility with current project setup
+- **Apply Modern Design Standards**: Always use the gradient backgrounds, colored cards, and consistent styling patterns defined above
+- **Maintain Design Consistency**: Ensure all pages follow the same visual hierarchy and component patterns
+- **Implement Proper RTL Support**: All Arabic content should be properly aligned and directionally correct
