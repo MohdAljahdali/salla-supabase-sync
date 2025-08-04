@@ -3,7 +3,7 @@
  * Database schema and API types for the sync application
  */
 
-import type { ID, Timestamp, Currency, Language, Status } from './index';
+import type { Timestamp, Currency, Language, Status } from './index';
 
 // Database table types
 export interface Database {
