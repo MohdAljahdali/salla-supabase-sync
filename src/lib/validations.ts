@@ -261,7 +261,7 @@ export const webhookSchema = z.object({
 // Search and filter schemas
 export const searchSchema = z.object({
   query: z.string().max(100, 'استعلام البحث طويل جداً').optional(),
-  filters: z.record(z.unknown()).optional(),
+  filters: z.record(z.string(), z.unknown()).optional(),
   sort: z.string().optional(),
   order: z.enum(['asc', 'desc']).optional(),
   page: z.number().int().min(1).optional(),

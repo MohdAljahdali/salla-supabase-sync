@@ -4,8 +4,9 @@
  */
 
 import type { ReactNode, HTMLAttributes, ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
-import type { VariantProps } from 'class-variance-authority';
-import type { BaseComponentProps, LoadingState } from './index';
+
+// Loading state type
+export type LoadingState = 'idle' | 'loading' | 'success' | 'error';
 
 // Button component types
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -246,7 +247,8 @@ export interface ErrorFallbackProps {
 }
 
 // HOC and utility types
-export interface WithLoadingProps extends LoadingState {
+export interface WithLoadingProps {
+  loadingState: LoadingState;
   children: ReactNode;
   fallback?: ReactNode;
 }

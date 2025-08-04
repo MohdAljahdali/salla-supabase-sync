@@ -18,7 +18,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Toggle } from "@/components/ui/toggle";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { AlertCircle, CheckCircle2, User, Settings, Home, Search, Bell } from "lucide-react";
+import { AlertCircle, CheckCircle2, User, Settings } from "lucide-react";
 
 /**
  * Comprehensive showcase page for all shadcn/ui components
