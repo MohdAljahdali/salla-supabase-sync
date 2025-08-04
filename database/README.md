@@ -276,6 +276,78 @@ This directory contains SQL scripts to create the database schema for the Salla-
   - Forecasting and demand planning
   - Performance analytics and optimization
 
+## System and Settings Tables
+
+### 27. Settings Table (`33_settings_table.sql`)
+- **Purpose**: Comprehensive system configuration and store settings management
+- **Key Features**:
+  - Hierarchical settings organization by category and subcategory
+  - Multi-environment support (development, staging, production)
+  - Data type validation and constraints
+  - Localization and internationalization support
+  - Security levels and access control
+  - Version control and change tracking
+  - Caching and performance optimization
+  - Backup and disaster recovery settings
+  - Integration with external systems
+  - Audit trails and compliance tracking
+
+### 28. Export Logs Table (`34_export_logs_table.sql`)
+- **Purpose**: Comprehensive tracking of data export operations and templates
+- **Key Features**:
+  - Detailed export operation logging
+  - Multiple export formats (CSV, Excel, JSON, XML, PDF)
+  - Template management and customization
+  - Progress tracking and status monitoring
+  - Error handling and retry mechanisms
+  - File management and storage
+  - Security and access control
+  - Performance metrics and optimization
+  - Scheduling and automation
+  - Quality assurance and validation
+
+### 29. Store Info Table (`35_store_info_table.sql`)
+- **Purpose**: Comprehensive store information and metadata management
+- **Key Features**:
+  - Complete business profile and registration details
+  - Geographic location and contact information
+  - Operating hours and business metrics
+  - E-commerce platform integration settings
+  - SEO and marketing configuration
+  - Payment and shipping preferences
+  - Performance monitoring and analytics
+  - Compliance and legal information
+  - Resource usage and limits tracking
+  - Localization and internationalization
+
+### 30. User Info Table (`36_user_info_table.sql`)
+- **Purpose**: Detailed user profiles and comprehensive user management
+- **Key Features**:
+  - Complete user profile management
+  - Role-based access control and permissions
+  - Security features and authentication tracking
+  - Activity monitoring and engagement metrics
+  - Team collaboration and management
+  - Performance tracking and gamification
+  - Notification and communication preferences
+  - Training and certification tracking
+  - Compliance and audit trails
+  - Customizable user attributes
+
+### 31. Sync Logs Table (`37_sync_logs_table.sql`)
+- **Purpose**: Comprehensive synchronization tracking between Salla API and Supabase
+- **Key Features**:
+  - Detailed sync operation monitoring
+  - Real-time progress tracking and status updates
+  - Error handling and retry mechanisms
+  - Performance metrics and optimization
+  - Data quality and integrity validation
+  - Business impact assessment
+  - Conflict resolution and data lineage
+  - Security and compliance tracking
+  - Resource utilization monitoring
+  - Automated alerting and notifications
+
 ## Installation Instructions
 
 ### Option 1: Run All Core Tables
@@ -313,7 +385,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 32_run_all_analytics_reports_tables.sql
 ```
 
-### Option 8: Run Individual Tables
+### Option 8: Run All System and Settings Tables
+```sql
+\i 38_run_all_system_settings_tables.sql
+```
+
+### Option 9: Run Individual Tables
 
 #### Core Tables:
 ```sql
@@ -369,6 +446,15 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 31_product_quantities_table.sql
 ```
 
+#### System and Settings Tables:
+```sql
+\i 33_settings_table.sql
+\i 34_export_logs_table.sql
+\i 35_store_info_table.sql
+\i 36_user_info_table.sql
+\i 37_sync_logs_table.sql
+```
+
 ## Database Features
 
 ### Automatic Triggers
@@ -398,6 +484,11 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **Reservation Amount Calculations**: Reservations automatically calculate total amounts and fees
 - **Product Quantity Metrics**: Product quantities automatically calculate stock metrics and alerts
 - **Inventory Stock Alerts**: Product quantities automatically trigger stock level alerts
+- **Settings Validation**: Settings automatically validate values and configurations
+- **Export Progress Tracking**: Export logs automatically track progress and completion status
+- **Store Metrics Calculation**: Store info automatically calculates business metrics and performance
+- **User Activity Tracking**: User info automatically tracks activity and engagement metrics
+- **Sync Performance Monitoring**: Sync logs automatically calculate performance metrics and success rates
 
 ### Performance Optimizations
 - **Indexes**: Strategic indexes on frequently queried columns
@@ -434,6 +525,10 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **daily_analytics_summary**: Daily summary of key analytics metrics for trend analysis
 - **product_performance_analytics**: Product-level performance analytics combining multiple data sources
 - **customer_analytics**: Customer behavior analytics based on abandoned carts and reservations
+- **system_overview**: Comprehensive system overview combining settings, exports, stores, users, and sync operations
+- **sync_performance_summary**: Daily summary of sync operation performance and success rates
+- **user_activity_summary**: User activity and engagement summary with performance metrics
+- **export_analytics_summary**: Export operation analytics with performance and usage metrics
 
 ### Helper Functions
 - **get_category_path()**: Generate category breadcrumb
@@ -477,6 +572,40 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **get_store_branches_stats()**: Aggregated branch statistics for stores
 - **search_branches()**: Advanced branch search with location and performance filters
 - **update_branch_metrics_from_orders()**: Update branch metrics from order data
+- **get_setting_value()**: Retrieve setting values with fallback defaults
+- **set_setting_value()**: Update setting values with validation
+- **get_settings_by_category()**: Get all settings for a specific category
+- **get_settings_stats()**: Settings usage and configuration statistics
+- **search_settings()**: Advanced settings search with filters
+- **bulk_update_settings()**: Update multiple settings efficiently
+- **get_export_stats()**: Export operation statistics and performance
+- **search_export_logs()**: Advanced export logs search with filters
+- **get_export_details()**: Detailed export operation information
+- **update_export_progress()**: Update export operation progress
+- **complete_export()**: Mark export as completed with metrics
+- **fail_export()**: Mark export as failed with error details
+- **cleanup_expired_exports()**: Clean up expired export files and logs
+- **get_store_info()**: Retrieve comprehensive store information
+- **update_store_metrics()**: Update store business metrics
+- **update_store_resource_usage()**: Update store resource utilization
+- **search_stores()**: Advanced store search with filters
+- **get_store_stats()**: Store performance and operational statistics
+- **get_store_performance()**: Store performance metrics and analytics
+- **get_user_profile()**: Retrieve comprehensive user profile information
+- **update_user_activity()**: Update user activity and engagement metrics
+- **record_user_login()**: Record user login and update security metrics
+- **search_users()**: Advanced user search with filters
+- **get_user_stats()**: User activity and engagement statistics
+- **get_user_performance()**: User performance metrics and analytics
+- **start_sync_operation()**: Initialize new sync operation
+- **update_sync_progress()**: Update sync operation progress
+- **complete_sync_operation()**: Mark sync operation as completed
+- **get_sync_stats()**: Sync operation statistics and performance
+- **search_sync_logs()**: Advanced sync logs search with filters
+- **get_sync_details()**: Detailed sync operation information
+- **retry_sync_operation()**: Retry failed sync operations
+- **get_system_dashboard()**: Comprehensive system dashboard data
+- **generate_system_health_report()**: Generate system health and performance reports
 - **get_currency_stats()**: Currency usage and performance statistics
 - **convert_currency()**: Real-time currency conversion with current rates
 - **update_exchange_rates()**: Bulk update exchange rates from external sources

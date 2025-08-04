@@ -231,28 +231,28 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### System and Settings Tables
-- [ ] **Settings Table (settings)**:
+- [X] **Settings Table (settings)**:
   - General store settings
   - System configurations
   - **Link to store (store_id)**
 
-- [ ] **Export Logs Table (export_logs)**:
+- [X] **Export Logs Table (export_logs)**:
   - Export operation logs
   - Export templates
   - Export columns
   - **Link to store (store_id)**
 
-- [ ] **Store Info Table (store_info)**:
+- [X] **Store Info Table (store_info)**:
   - Basic store information
   - Display settings
   - **Link to store (store_id)**
 
-- [ ] **User Info Table (user_info)**:
+- [X] **User Info Table (user_info)**:
   - System user information
   - Access permissions
   - **Link to store (store_id)**
 
-- [ ] **Sync Logs Table (sync_logs)**:
+- [X] **Sync Logs Table (sync_logs)**:
   - Synchronization operation tracking
   - Synchronization errors
   - Synchronization statistics
