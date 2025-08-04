@@ -55,10 +55,49 @@ A specialized Next.js application for fetching data from Salla store and storing
 - [ ] Configure environment variables (.env.local)
 
 ### Phase 2: Database Setup
-- [ - ] Design database tables for required Salla data:
+
+#### Database Design Rules and Standards
+- [ ] **JSONB Column Normalization Rule**: 
+  - If any column has JSONB data type, remove the column and create a new separate table
+  - Link the new table to the parent table using foreign key relationship
+  - This ensures better data structure and query performance
+
+- [ ] **File Organization Rule**:
+  - Each main table should be in its own separate SQL file
+  - Include all related/child tables in the same file as the parent table
+  - This maintains logical grouping and easier maintenance
+
+- [ ] **Indexing Focus**:
+  - Create comprehensive indexes for all foreign keys
+  - Add GIN indexes for JSONB columns (if any remain)
+  - Create text search indexes for searchable text fields
+  - Add composite indexes for frequently queried column combinations
+
+- [ ] **Relationships Focus**:
+  - Define clear foreign key relationships between all tables
+  - Ensure referential integrity with proper constraints
+  - Use CASCADE options appropriately for data consistency
+
+- [ ] **Salla API Documentation Integration**:
+  - Use Salla Docs MCP to understand proper table structures
+  - Align database schema with official Salla API specifications
+  - Ensure all Salla API fields are properly mapped to database columns
+
+- [ ] **Data Integrity Rules**:
+  - Focus only on preventing duplicate data (UNIQUE constraints)
+  - No input validation constraints (let application handle validation)
+  - Maintain data consistency through proper relationships
+
+- [ ] **Bilingual Comments Standard**:
+  - Add COMMENT to all tables, columns, indexes, and functions
+  - Use Arabic and English format: "Arabic Description - English Description"
+  - Example: "اسم المنتج - Product Name"
+  - Keep comments concise and descriptive
+
+- [ ] Design database tables for required Salla data:
 
 #### Core Tables
-- [ X ] **Stores Table (stores)**:
+- [ ] **Stores Table (stores)**:
   - Basic store information (name, description, logo)
   - Contact information (email, phone, address)
   - Store settings (default currency, timezone, language)
@@ -67,7 +106,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Creation date and last update
   - Store-specific API keys
 
-- [ X ] **Products Table (products)**:
+- [ ] **Products Table (products)**:
   - Basic product information (name, description, price, quantity)
   - SEO information (title, meta description)
   - Shipping information (weight, weight type, requires shipping)
@@ -78,14 +117,14 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Ratings and reviews
   - **Link to store (store_id)**
 
-- [ X ] **Categories Table (categories)**:
+- [ ] **Categories Table (categories)**:
   - Basic category information
   - Subcategories and hierarchical structure
   - Category images
   - SEO information for categories
   - **Link to store (store_id)**
 
-- [ X ] **Orders Table (orders)**:
+- [ ] **Orders Table (orders)**:
   - Basic order information
   - Order status and update dates
   - Payment and shipping information
@@ -94,7 +133,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Order and delivery dates
   - **Link to store (store_id)**
 
-- [ X ] **Customers Table (customers)**:
+- [ ] **Customers Table (customers)**:
   - Personal customer information
   - Shipping and billing addresses
   - Registration date and last activity
@@ -102,7 +141,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Customer status (active, banned)
   - **Link to store (store_id)**
 
-- [ X ] **Order Items Table (order_items)**:
+- [ ] **Order Items Table (order_items)**:
   - Product details in each order
   - Quantity and price for each item
   - Selected product options
@@ -110,155 +149,154 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### Shipping and Delivery Tables
-- [X] **Shipments Table (shipments)**:
+- [ ] **Shipments Table (shipments)**:
   - Basic shipment information
   - Shipping company and tracking number
   - Shipment status and update dates
   - Delivery details
   - **Link to store (store_id)**
 
-- [X] **Shipping Companies Table (shipping_companies)**:
+- [ ] **Shipping Companies Table (shipping_companies)**:
   - Shipping company information
   - Shipping options and prices
   - Coverage areas
   - **Link to store (store_id)**
 
-- [X] **Shipping Zones Table (shipping_zones)**:
+- [ ] **Shipping Zones Table (shipping_zones)**:
   - Shipping zone definitions
   - Shipping rules for each zone
   - Shipping prices by zone
   - **Link to store (store_id)**
 
-- [X] **Shipping Rules Table (shipping_rules)**:
+- [ ] **Shipping Rules Table (shipping_rules)**:
   - Shipping cost calculation rules
   - Free shipping conditions
   - Shipping restrictions
   - **Link to store (store_id)**
 
 #### Financial and Payment Tables
-- [X] **Transactions Table (transactions)**:
+- [ ] **Transactions Table (transactions)**:
   - Financial transaction details
   - Payment methods used
   - Transaction status
   - Payment and refund amounts
   - **Link to store (store_id)**
 
-- [X] **Invoices Table (invoices)**:
+- [ ] **Invoices Table (invoices)**:
   - Order invoices
   - Billing details
   - Payment status
   - **Link to store (store_id)**
 
-- [X] **Payment Methods Table (payment_methods)**:
+- [ ] **Payment Methods Table (payment_methods)**:
   - Available payment methods
   - Settings for each payment method
   - **Link to store (store_id)**
 
-- [X] **Payment Banks Table (payment_banks)**:
+- [ ] **Payment Banks Table (payment_banks)**:
   - Available bank information
   - Bank transfer details
   - **Link to store (store_id)**
 
 #### Marketing and Offers Tables
-- [X] **Coupons Table (coupons)**:
+- [ ] **Coupons Table (coupons)**:
   - Coupon and discount information
   - Usage conditions
   - Expiry dates
   - Coupon codes
   - **Link to store (store_id)**
 
-- [X] **Special Offers Table (special_offers)**:
+- [ ] **Special Offers Table (special_offers)**:
   - Promotional offer details
   - Offer conditions
   - Offer periods
   - **Link to store (store_id)**
 
-- [X] **Affiliates Table (affiliates)**:
+- [ ] **Affiliates Table (affiliates)**:
   - Affiliate partner information
   - Referral commissions
   - Performance statistics
   - **Link to store (store_id)**
 
 #### Content Management Tables
-- [X] **Brands Table (brands)**:
+- [ ] **Brands Table (brands)**:
   - Brand information
   - Brand logos
   - **Link to store (store_id)**
 
-- [X] **Tags Table (tags)**:
+- [ ] **Tags Table (tags)**:
   - Product and order tags
   - Content classification
   - **Link to store (store_id)**
 
-- [X] **Taxes Table (taxes)**:
+- [ ] **Taxes Table (taxes)**:
   - Tax rules
   - Tax rates by region
   - **Link to store (store_id)**
 
 #### Store Management Tables
-- [X] **Branches Table (branches)**:
+- [ ] **Branches Table (branches)**:
   - Store branch information
   - Inventory for each branch
   - Product allocation to branches
   - **Link to store (store_id)**
 
-- [X] **Currencies Table (currencies)**:
+- [ ] **Currencies Table (currencies)**:
   - Supported currencies
   - Exchange rates
   - **Link to store (store_id)**
 
-- [X] **Countries Table (countries)**:
+- [ ] **Countries Table (countries)**:
   - List of supported countries
   - Shipping information for each country
   - **Link to store (store_id)**
 
 #### Analytics and Reports Tables
-- [X] **Abandoned Carts Table (abandoned_carts)**:
+- [ ] **Abandoned Carts Table (abandoned_carts)**:
   - Abandoned cart details
   - Customer information
   - Products in cart
   - **Link to store (store_id)**
 
-- [X] **Reservations Table (reservations)**:
+- [ ] **Reservations Table (reservations)**:
   - Order reservations
   - Reserved inventory details
   - **Link to store (store_id)**
 
-- [X] **Product Quantities Table (product_quantities)**:
+- [ ] **Product Quantities Table (product_quantities)**:
   - Inventory change tracking
   - Reasons for quantity changes
   - Inventory audit log
   - **Link to store (store_id)**
 
 #### System and Settings Tables
-- [X] **Settings Table (settings)**:
+- [ ] **Settings Table (settings)**:
   - General store settings
   - System configurations
   - **Link to store (store_id)**
 
-- [X] **Export Logs Table (export_logs)**:
+- [ ] **Export Logs Table (export_logs)**:
   - Export operation logs
   - Export templates
   - Export columns
   - **Link to store (store_id)**
 
-- [X] **Store Info Table (store_info)**:
+- [ ] **Store Info Table (store_info)**:
   - Basic store information
   - Display settings
   - **Link to store (store_id)**
 
-- [X] **User Info Table (user_info)**:
+- [ ] **User Info Table (user_info)**:
   - System user information
   - Access permissions
   - **Link to store (store_id)**
 
-- [X] **Sync Logs Table (sync_logs)**:
+- [ ] **Sync Logs Table (sync_logs)**:
   - Synchronization operation tracking
   - Synchronization errors
   - Synchronization statistics
   - **Link to store (store_id)**
 
-- [ ] Create tables in Supabase
 - [ ] Setup relationships between tables
 - [ ] Configure Row Level Security (RLS)
 
