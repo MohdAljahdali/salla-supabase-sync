@@ -238,6 +238,44 @@ This directory contains SQL scripts to create the database schema for the Salla-
   - Economic and demographic data
   - Integration with external services
 
+## Analytics and Reports Tables
+
+### 24. Abandoned Carts Table (`29_abandoned_carts_table.sql`)
+- **Purpose**: Track and analyze abandoned shopping carts for recovery optimization
+- **Key Features**:
+  - Comprehensive cart abandonment tracking
+  - Customer behavior analysis and segmentation
+  - Recovery campaign management and automation
+  - Conversion tracking and performance metrics
+  - Geographic and demographic insights
+  - Marketing attribution and ROI analysis
+  - Risk assessment and fraud detection
+  - Seasonal and temporal pattern analysis
+
+### 25. Reservations Table (`30_reservations_table.sql`)
+- **Purpose**: Manage product reservations and booking systems
+- **Key Features**:
+  - Comprehensive reservation management
+  - Service and appointment booking
+  - Capacity and resource allocation
+  - Staff scheduling and assignment
+  - Payment processing and confirmation
+  - Customer communication and notifications
+  - Performance analytics and reporting
+  - Integration with external booking systems
+
+### 26. Product Quantities Table (`31_product_quantities_table.sql`)
+- **Purpose**: Advanced inventory tracking and stock management
+- **Key Features**:
+  - Real-time inventory monitoring
+  - Stock movement tracking and audit trails
+  - Multi-location inventory management
+  - Automated reorder and alert systems
+  - Supplier and cost management
+  - Quality control and expiry tracking
+  - Forecasting and demand planning
+  - Performance analytics and optimization
+
 ## Installation Instructions
 
 ### Option 1: Run All Core Tables
@@ -270,7 +308,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 28_run_all_store_management_tables.sql
 ```
 
-### Option 7: Run Individual Tables
+### Option 7: Run All Analytics and Reports Tables
+```sql
+\i 32_run_all_analytics_reports_tables.sql
+```
+
+### Option 8: Run Individual Tables
 
 #### Core Tables:
 ```sql
@@ -319,6 +362,13 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 27_countries_table.sql
 ```
 
+#### Analytics and Reports Tables:
+```sql
+\i 29_abandoned_carts_table.sql
+\i 30_reservations_table.sql
+\i 31_product_quantities_table.sql
+```
+
 ## Database Features
 
 ### Automatic Triggers
@@ -342,6 +392,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **Currency Performance Metrics**: Currencies automatically update performance metrics
 - **Country Settings Validation**: Countries automatically validate settings and configurations
 - **Country Performance Metrics**: Countries automatically update performance metrics
+- **Abandoned Cart Timestamps**: Abandoned carts automatically track abandonment, recovery, and conversion timestamps
+- **Abandoned Cart Recovery Metrics**: Abandoned carts automatically calculate recovery scores and metrics
+- **Reservation Status Timestamps**: Reservations automatically track status change timestamps
+- **Reservation Amount Calculations**: Reservations automatically calculate total amounts and fees
+- **Product Quantity Metrics**: Product quantities automatically calculate stock metrics and alerts
+- **Inventory Stock Alerts**: Product quantities automatically trigger stock level alerts
 
 ### Performance Optimizations
 - **Indexes**: Strategic indexes on frequently queried columns
@@ -374,6 +430,10 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **store_management_overview**: Comprehensive overview of store management elements per store
 - **active_store_management_elements**: Unified view of all active store management elements
 - **store_management_performance_report**: Performance metrics for store management elements
+- **analytics_overview**: Comprehensive analytics overview combining abandoned carts, reservations, and inventory
+- **daily_analytics_summary**: Daily summary of key analytics metrics for trend analysis
+- **product_performance_analytics**: Product-level performance analytics combining multiple data sources
+- **customer_analytics**: Customer behavior analytics based on abandoned carts and reservations
 
 ### Helper Functions
 - **get_category_path()**: Generate category breadcrumb
@@ -429,6 +489,22 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **search_store_management_elements()**: Unified search across branches, currencies, and countries
 - **generate_store_management_report()**: Generate store management performance reports
 - **cleanup_inactive_store_management_elements()**: Clean up inactive store management elements
+- **get_analytics_dashboard()**: Comprehensive analytics dashboard combining all analytics data
+- **generate_analytics_report()**: Generate various types of analytics reports (summary, detailed, trends)
+- **get_top_performing_products()**: Get top performing products based on different metrics
+- **get_abandoned_cart_stats()**: Abandoned cart statistics and recovery metrics
+- **search_abandoned_carts()**: Advanced search for abandoned carts with filters
+- **mark_cart_as_recovered()**: Mark abandoned carts as recovered and update metrics
+- **get_reservation_stats()**: Reservation statistics and performance metrics
+- **search_reservations()**: Advanced reservation search with filters
+- **get_staff_schedule()**: Staff scheduling and availability management
+- **check_reservation_availability()**: Check availability for new reservations
+- **update_reservation_status()**: Update reservation status and related metrics
+- **get_inventory_stats()**: Comprehensive inventory statistics and analytics
+- **search_product_quantities()**: Advanced inventory search with filters
+- **update_product_quantity()**: Update product quantities with audit trail
+- **get_reorder_list()**: Generate reorder recommendations based on stock levels
+- **reserve_product_quantity()**: Reserve product quantities for orders
 
 ## Next Steps
 

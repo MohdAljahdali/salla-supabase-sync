@@ -213,18 +213,18 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### Analytics and Reports Tables
-- [ ] **Abandoned Carts Table (abandoned_carts)**:
+- [X] **Abandoned Carts Table (abandoned_carts)**:
   - Abandoned cart details
   - Customer information
   - Products in cart
   - **Link to store (store_id)**
 
-- [ ] **Reservations Table (reservations)**:
+- [X] **Reservations Table (reservations)**:
   - Order reservations
   - Reserved inventory details
   - **Link to store (store_id)**
 
-- [ ] **Product Quantities Table (product_quantities)**:
+- [X] **Product Quantities Table (product_quantities)**:
   - Inventory change tracking
   - Reasons for quantity changes
   - Inventory audit log
