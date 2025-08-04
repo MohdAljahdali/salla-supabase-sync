@@ -196,18 +196,18 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### Store Management Tables
-- [ ] **Branches Table (branches)**:
+- [X] **Branches Table (branches)**:
   - Store branch information
   - Inventory for each branch
   - Product allocation to branches
   - **Link to store (store_id)**
 
-- [ ] **Currencies Table (currencies)**:
+- [X] **Currencies Table (currencies)**:
   - Supported currencies
   - Exchange rates
   - **Link to store (store_id)**
 
-- [ ] **Countries Table (countries)**:
+- [X] **Countries Table (countries)**:
   - List of supported countries
   - Shipping information for each country
   - **Link to store (store_id)**

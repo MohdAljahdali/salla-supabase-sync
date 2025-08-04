@@ -203,6 +203,41 @@ This directory contains SQL scripts to create the database schema for the Salla-
   - Performance metrics and reporting
   - Integration with external tax services
 
+## Store Management Tables
+
+### 21. Branches Table (`25_branches_table.sql`)
+- **Purpose**: Store branch management and operations
+- **Key Features**:
+  - Comprehensive branch profiles
+  - Inventory management per branch
+  - Product allocation and distribution
+  - Performance metrics and analytics
+  - Staff management and operations
+  - Financial tracking and reporting
+  - Location-based services and mapping
+
+### 22. Currencies Table (`26_currencies_table.sql`)
+- **Purpose**: Multi-currency support and exchange rates
+- **Key Features**:
+  - Real-time exchange rate management
+  - Currency conversion and calculations
+  - Historical rate tracking
+  - Performance metrics and analytics
+  - Risk management and compliance
+  - Payment integration and processing
+  - Regional currency support
+
+### 23. Countries Table (`27_countries_table.sql`)
+- **Purpose**: Geographic and regional management
+- **Key Features**:
+  - Comprehensive country profiles
+  - Shipping and logistics configuration
+  - Tax and compliance management
+  - Performance metrics and analytics
+  - Regional settings and preferences
+  - Economic and demographic data
+  - Integration with external services
+
 ## Installation Instructions
 
 ### Option 1: Run All Core Tables
@@ -230,7 +265,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 24_run_all_content_management_tables.sql
 ```
 
-### Option 6: Run Individual Tables
+### Option 6: Run All Store Management Tables
+```sql
+\i 28_run_all_store_management_tables.sql
+```
+
+### Option 7: Run Individual Tables
 
 #### Core Tables:
 ```sql
@@ -272,6 +312,13 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 23_taxes_table.sql
 ```
 
+#### Store Management Tables:
+```sql
+\i 25_branches_table.sql
+\i 26_currencies_table.sql
+\i 27_countries_table.sql
+```
+
 ## Database Features
 
 ### Automatic Triggers
@@ -289,6 +336,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **Brand Slug Generation**: Brands automatically generate URL-friendly slugs
 - **Tag Hierarchy**: Tags automatically update hierarchy levels and paths
 - **Tax Configuration Validation**: Taxes automatically validate configuration and rates
+- **Branch Slug Generation**: Branches automatically generate URL-friendly slugs
+- **Branch Performance Metrics**: Branches automatically update performance metrics
+- **Currency Settings Validation**: Currencies automatically validate settings and rates
+- **Currency Performance Metrics**: Currencies automatically update performance metrics
+- **Country Settings Validation**: Countries automatically validate settings and configurations
+- **Country Performance Metrics**: Countries automatically update performance metrics
 
 ### Performance Optimizations
 - **Indexes**: Strategic indexes on frequently queried columns
@@ -318,6 +371,9 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **content_management_overview**: Overview of content management elements per store
 - **active_content_elements**: Unified view of all active content management elements
 - **content_performance_report**: Performance metrics for content management elements
+- **store_management_overview**: Comprehensive overview of store management elements per store
+- **active_store_management_elements**: Unified view of all active store management elements
+- **store_management_performance_report**: Performance metrics for store management elements
 
 ### Helper Functions
 - **get_category_path()**: Generate category breadcrumb
@@ -357,6 +413,22 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **search_content_elements()**: Unified search across brands, tags, and taxes
 - **generate_content_management_report()**: Generate content management reports
 - **cleanup_inactive_content_elements()**: Clean up inactive content elements
+- **get_branch_stats()**: Branch performance and operational statistics
+- **get_store_branches_stats()**: Aggregated branch statistics for stores
+- **search_branches()**: Advanced branch search with location and performance filters
+- **update_branch_metrics_from_orders()**: Update branch metrics from order data
+- **get_currency_stats()**: Currency usage and performance statistics
+- **convert_currency()**: Real-time currency conversion with current rates
+- **update_exchange_rates()**: Bulk update exchange rates from external sources
+- **get_currency_conversion_history()**: Historical currency conversion data
+- **get_country_stats()**: Country performance and shipping statistics
+- **search_countries()**: Advanced country search with geographic and economic filters
+- **calculate_country_shipping_cost()**: Calculate shipping costs by country
+- **update_country_metrics_from_orders()**: Update country metrics from order data
+- **get_store_management_dashboard()**: Comprehensive store management dashboard
+- **search_store_management_elements()**: Unified search across branches, currencies, and countries
+- **generate_store_management_report()**: Generate store management performance reports
+- **cleanup_inactive_store_management_elements()**: Clean up inactive store management elements
 
 ## Next Steps
 
