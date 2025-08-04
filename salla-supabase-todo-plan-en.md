@@ -51,14 +51,14 @@ A specialized Next.js application for fetching data from Salla store and storing
     - Expanded webhook events to include 40+ event types
     - Updated order and payment status enums with new values
     - Synchronized Supabase database types with Salla API changes
-- [ ] Create Supabase account and setup database
+- [ - ] Create Supabase account and setup database
 - [ ] Configure environment variables (.env.local)
 
 ### Phase 2: Database Setup
-- [ ] Design database tables for required Salla data:
+- [ - ] Design database tables for required Salla data:
 
 #### Core Tables
-- [ ] **Stores Table (stores)**:
+- [ X ] **Stores Table (stores)**:
   - Basic store information (name, description, logo)
   - Contact information (email, phone, address)
   - Store settings (default currency, timezone, language)
@@ -67,7 +67,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Creation date and last update
   - Store-specific API keys
 
-- [ ] **Products Table (products)**:
+- [ X ] **Products Table (products)**:
   - Basic product information (name, description, price, quantity)
   - SEO information (title, meta description)
   - Shipping information (weight, weight type, requires shipping)
@@ -78,14 +78,14 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Ratings and reviews
   - **Link to store (store_id)**
 
-- [ ] **Categories Table (categories)**:
+- [ X ] **Categories Table (categories)**:
   - Basic category information
   - Subcategories and hierarchical structure
   - Category images
   - SEO information for categories
   - **Link to store (store_id)**
 
-- [ ] **Orders Table (orders)**:
+- [ X ] **Orders Table (orders)**:
   - Basic order information
   - Order status and update dates
   - Payment and shipping information
@@ -94,7 +94,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Order and delivery dates
   - **Link to store (store_id)**
 
-- [ ] **Customers Table (customers)**:
+- [ X ] **Customers Table (customers)**:
   - Personal customer information
   - Shipping and billing addresses
   - Registration date and last activity
@@ -102,7 +102,7 @@ A specialized Next.js application for fetching data from Salla store and storing
   - Customer status (active, banned)
   - **Link to store (store_id)**
 
-- [ ] **Order Items Table (order_items)**:
+- [ X ] **Order Items Table (order_items)**:
   - Product details in each order
   - Quantity and price for each item
   - Selected product options
@@ -110,70 +110,70 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### Shipping and Delivery Tables
-- [ ] **Shipments Table (shipments)**:
+- [X] **Shipments Table (shipments)**:
   - Basic shipment information
   - Shipping company and tracking number
   - Shipment status and update dates
   - Delivery details
   - **Link to store (store_id)**
 
-- [ ] **Shipping Companies Table (shipping_companies)**:
+- [X] **Shipping Companies Table (shipping_companies)**:
   - Shipping company information
   - Shipping options and prices
   - Coverage areas
   - **Link to store (store_id)**
 
-- [ ] **Shipping Zones Table (shipping_zones)**:
+- [X] **Shipping Zones Table (shipping_zones)**:
   - Shipping zone definitions
   - Shipping rules for each zone
   - Shipping prices by zone
   - **Link to store (store_id)**
 
-- [ ] **Shipping Rules Table (shipping_rules)**:
+- [X] **Shipping Rules Table (shipping_rules)**:
   - Shipping cost calculation rules
   - Free shipping conditions
   - Shipping restrictions
   - **Link to store (store_id)**
 
 #### Financial and Payment Tables
-- [ ] **Transactions Table (transactions)**:
+- [X] **Transactions Table (transactions)**:
   - Financial transaction details
   - Payment methods used
   - Transaction status
   - Payment and refund amounts
   - **Link to store (store_id)**
 
-- [ ] **Invoices Table (invoices)**:
+- [X] **Invoices Table (invoices)**:
   - Order invoices
   - Billing details
   - Payment status
   - **Link to store (store_id)**
 
-- [ ] **Payment Methods Table (payment_methods)**:
+- [X] **Payment Methods Table (payment_methods)**:
   - Available payment methods
   - Settings for each payment method
   - **Link to store (store_id)**
 
-- [ ] **Payment Banks Table (payment_banks)**:
+- [X] **Payment Banks Table (payment_banks)**:
   - Available bank information
   - Bank transfer details
   - **Link to store (store_id)**
 
 #### Marketing and Offers Tables
-- [ ] **Coupons Table (coupons)**:
+- [X] **Coupons Table (coupons)**:
   - Coupon and discount information
   - Usage conditions
   - Expiry dates
   - Coupon codes
   - **Link to store (store_id)**
 
-- [ ] **Special Offers Table (special_offers)**:
+- [X] **Special Offers Table (special_offers)**:
   - Promotional offer details
   - Offer conditions
   - Offer periods
   - **Link to store (store_id)**
 
-- [ ] **Affiliates Table (affiliates)**:
+- [X] **Affiliates Table (affiliates)**:
   - Affiliate partner information
   - Referral commissions
   - Performance statistics
