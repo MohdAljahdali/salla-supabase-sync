@@ -180,17 +180,17 @@ A specialized Next.js application for fetching data from Salla store and storing
   - **Link to store (store_id)**
 
 #### Content Management Tables
-- [ ] **Brands Table (brands)**:
+- [X] **Brands Table (brands)**:
   - Brand information
   - Brand logos
   - **Link to store (store_id)**
 
-- [ ] **Tags Table (tags)**:
+- [X] **Tags Table (tags)**:
   - Product and order tags
   - Content classification
   - **Link to store (store_id)**
 
-- [ ] **Taxes Table (taxes)**:
+- [X] **Taxes Table (taxes)**:
   - Tax rules
   - Tax rates by region
   - **Link to store (store_id)**

@@ -171,6 +171,38 @@ This directory contains SQL scripts to create the database schema for the Salla-
   - Fraud prevention and compliance
   - Recruitment and referral management
 
+## Content Management Tables
+
+### 18. Brands Table (`21_brands_table.sql`)
+- **Purpose**: Brand management and organization
+- **Key Features**:
+  - Comprehensive brand profiles
+  - Brand media and assets management
+  - Performance metrics and analytics
+  - SEO optimization and marketing
+  - Social media integration
+  - Quality assurance and partnerships
+
+### 19. Tags Table (`22_tags_table.sql`)
+- **Purpose**: Content classification and organization
+- **Key Features**:
+  - Hierarchical tag structure
+  - Multiple tag types and categories
+  - Usage tracking and analytics
+  - Auto-assignment and suggestions
+  - Performance metrics and engagement
+  - Multilingual support and translations
+
+### 20. Taxes Table (`23_taxes_table.sql`)
+- **Purpose**: Tax configuration and calculation
+- **Key Features**:
+  - Multiple tax types and methods
+  - Geographic and customer-based rules
+  - Tiered and progressive taxation
+  - Compliance and audit tracking
+  - Performance metrics and reporting
+  - Integration with external tax services
+
 ## Installation Instructions
 
 ### Option 1: Run All Core Tables
@@ -193,7 +225,12 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 20_run_all_marketing_tables.sql
 ```
 
-### Option 5: Run Individual Tables
+### Option 5: Run All Content Management Tables
+```sql
+\i 24_run_all_content_management_tables.sql
+```
+
+### Option 6: Run Individual Tables
 
 #### Core Tables:
 ```sql
@@ -228,6 +265,13 @@ This directory contains SQL scripts to create the database schema for the Salla-
 \i 19_affiliates_table.sql
 ```
 
+#### Content Management Tables:
+```sql
+\i 21_brands_table.sql
+\i 22_tags_table.sql
+\i 23_taxes_table.sql
+```
+
 ## Database Features
 
 ### Automatic Triggers
@@ -242,6 +286,9 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **Coupon Status**: Coupons automatically update status based on usage and expiry
 - **Offer Status**: Special offers automatically update status and remaining stock
 - **Affiliate Performance**: Affiliates automatically calculate performance metrics
+- **Brand Slug Generation**: Brands automatically generate URL-friendly slugs
+- **Tag Hierarchy**: Tags automatically update hierarchy levels and paths
+- **Tax Configuration Validation**: Taxes automatically validate configuration and rates
 
 ### Performance Optimizations
 - **Indexes**: Strategic indexes on frequently queried columns
@@ -268,6 +315,9 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **marketing_overview**: Comprehensive marketing activities overview
 - **active_marketing_campaigns**: Currently active marketing campaigns
 - **marketing_performance_report**: Monthly marketing performance analytics
+- **content_management_overview**: Overview of content management elements per store
+- **active_content_elements**: Unified view of all active content management elements
+- **content_performance_report**: Performance metrics for content management elements
 
 ### Helper Functions
 - **get_category_path()**: Generate category breadcrumb
@@ -295,6 +345,18 @@ This directory contains SQL scripts to create the database schema for the Salla-
 - **apply_best_marketing_offer()**: Find and apply best available offers
 - **generate_marketing_report()**: Generate marketing performance reports
 - **cleanup_expired_marketing_campaigns()**: Automatically deactivate expired campaigns
+- **get_brand_stats()**: Brand performance and product statistics
+- **search_brands()**: Advanced brand search with filters
+- **update_brand_metrics_from_products()**: Update brand metrics from product data
+- **get_tag_stats()**: Tag usage and performance statistics
+- **get_tag_hierarchy()**: Retrieve tag hierarchy and relationships
+- **increment_tag_usage()**: Track and update tag usage metrics
+- **calculate_tax_amount()**: Calculate tax amounts for orders
+- **get_applicable_taxes()**: Get applicable taxes for products/orders
+- **get_content_management_dashboard()**: Comprehensive content management metrics
+- **search_content_elements()**: Unified search across brands, tags, and taxes
+- **generate_content_management_report()**: Generate content management reports
+- **cleanup_inactive_content_elements()**: Clean up inactive content elements
 
 ## Next Steps
 
