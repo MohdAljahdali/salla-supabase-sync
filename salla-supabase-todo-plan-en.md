@@ -302,6 +302,38 @@ A specialized Next.js application for fetching data from Salla store and storing
 
 #### Additional Step: Add Test Data for Testing
 
+#### Test Data Rules and Standards
+- [ ] **Real and Realistic Data Rule**:
+  - Use realistic and authentic data that reflects real-world scenarios
+  - Data should be interconnected and logically consistent
+  - Ensure data integrity to validate project functionality and design
+  - Use actual product names, realistic prices, and valid addresses
+
+- [ ] **Relationship Integrity Rule**:
+  - All test data must respect foreign key relationships
+  - Ensure referential integrity across all related tables
+  - Create data that demonstrates proper table relationships
+  - Validate that all foreign keys point to existing records
+
+- [ ] **Comprehensive Data Volume Rule**:
+  - Generate substantial amount of test data for thorough testing
+  - Include multiple records per table to test performance
+  - Create enough data to simulate real-world usage scenarios
+  - Ensure data variety to cover different use cases
+
+- [ ] **No Random Relationships Rule**:
+  - Avoid creating arbitrary or meaningless relationships between tables
+  - Ensure all relationships make business sense
+  - Create logical data flows that reflect real e-commerce operations
+  - Maintain data consistency across related entities
+
+- [ ] **Multi-Store Data Design Rule**:
+  - Design test data for multiple stores (minimum 3-5 stores)
+  - Each store should have complete data ecosystem
+  - Demonstrate how data isolation works between stores
+  - Include different store types and business models
+  - Ensure each store has realistic product catalogs, customers, and orders
+
 ##### Core Tables
    - [ ] Add test data for stores (stores)
    - [ ] Add test data for products (products)
